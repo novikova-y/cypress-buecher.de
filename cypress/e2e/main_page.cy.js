@@ -1,3 +1,5 @@
+import { mainPage } from "../support/pages/mainPage";
+
 describe('Buecher.de main page', () => {
   beforeEach(() => {
     // Set cookies for consent acceptance
@@ -30,13 +32,20 @@ describe('Buecher.de main page', () => {
       "personalization": false,
       "marketing": false
     }));
-
-    // Visit the main page
-    cy.visit('https://www.buecher.de/');
   });
 
-  it('should open the main page with cookies already set', () => {
-    // Check if the page is loaded
-    cy.title().should('include', 'Bücher bestellen bei bücher.de');
+  it('should load the main page and check the title', () => {
+    mainPage.visit();
+    mainPage.getTitle().should('include', 'bücher.de');
+  });
+
+  it('should display the logo', () => {
+    mainPage.visit();
+    mainPage.getLogo().should('be.visible');
+  });
+
+  it('should display the search input', () => {
+    mainPage.visit();
+    mainPage.getSearchInput().should('be.visible');
   });
 });
