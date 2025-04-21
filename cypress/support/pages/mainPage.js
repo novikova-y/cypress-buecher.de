@@ -13,9 +13,12 @@ export class MainPage {
     }
   
     getLogo() {
-        return cy.get('a[href="https://www.buecher.de/"] .bde-logo');
+        return cy.get('svg.icon.bde-logo.pull-left');
     }
-    
+    getNewsletterInput() {
+        return cy.get('#form_email_benefit');
+    }
+
   }
   
   export const mainPage = new MainPage();

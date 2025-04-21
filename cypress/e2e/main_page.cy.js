@@ -48,4 +48,9 @@ describe('Buecher.de main page', () => {
     mainPage.visit();
     mainPage.getSearchInput().should('be.visible');
   });
+
+  it('should display the Newsletter-signup input', () => {
+    mainPage.visit();
+    mainPage.getNewsletterInput().should('be.visible');
+  });
 });
