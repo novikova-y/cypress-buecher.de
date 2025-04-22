@@ -1,7 +1,7 @@
 export class MainPage {
 
     visit() {
-      cy.visit('https://www.buecher.de/');
+      cy.visit('/');
     }
   
     getTitle() {
@@ -10,6 +10,9 @@ export class MainPage {
   
     getSearchInput() {
         return cy.get('#qusearchfield');
+    }
+    getRegistrationLink() {
+        return cy.get('a[data-gat="header;genericNavi;Anmelden"]');
     }
   
     getLogo() {

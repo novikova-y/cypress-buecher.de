@@ -49,6 +49,11 @@ describe('Buecher.de main page', () => {
     mainPage.getSearchInput().should('be.visible');
   });
 
+  it('should display the registration link', () => {
+    mainPage.visit();
+    mainPage.getRegistrationLink().should('be.visible');
+});
+
   it('should display the Newsletter-signup input', () => {
     mainPage.visit();
     mainPage.getNewsletterInput().should('be.visible');
