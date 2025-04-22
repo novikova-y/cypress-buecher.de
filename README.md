@@ -5,6 +5,7 @@ This project is focused on **automated testing** of the **Buecher.de** website u
 ## Technologies Used
 - **Cypress**: A powerful framework for end-to-end testing in JavaScript.
 - **Page Object Model (POM)**: Used to structure tests, making them more maintainable and scalable.
+- **GitHub Actions**: Integrated for Continuous Integration (CI) to automatically run tests on each push.
 
 ## Why This Project?
 This project is part of my personal challenge to improve **web automation testing** skills by applying them to a real e-commerce website.
