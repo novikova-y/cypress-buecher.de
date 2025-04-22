@@ -1,6 +1,6 @@
 # Cypress Testing for Buecher.de
 
-![Cypress Tests](https://github.com/novikova-y/cypress-buecher.de/actions/workflows/cypress.yml/badge.svg)
+![Tests](https://github.com/novikova-y/cypress-buecher.de/actions/workflows/cypress.yml/badge.svg)
 
 This project is focused on **automated testing** of the **Buecher.de** website using **Cypress**. The goal is to verify core functionality, ensure the page loads correctly, and check that essential elements are present on the site.
 
