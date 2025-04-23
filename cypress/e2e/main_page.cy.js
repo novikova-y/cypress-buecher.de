@@ -54,6 +54,21 @@ describe('Buecher.de main page', () => {
     mainPage.getRegistrationLink().should('be.visible');
 });
 
+it('should display the Wishlist icon', () => {
+  mainPage.visit();
+  mainPage.getWishlistIcon().should('be.visible');
+});
+
+it('should display the Payback icon', () => {
+  mainPage.visit();
+  mainPage.getPaybackIcon().should('be.visible');
+});
+
+it('should display the Shopping basket', () => {
+  mainPage.visit();
+  mainPage.getShoppingBasket().should('be.visible');
+});
+
   it('should display the Newsletter-signup input', () => {
     mainPage.visit();
     mainPage.getNewsletterInput().should('be.visible');
