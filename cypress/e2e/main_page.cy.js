@@ -32,45 +32,126 @@ describe('Buecher.de main page', () => {
       "personalization": false,
       "marketing": false
     }));
+    mainPage.visit();
   });
 
   it('should load the main page and check the title', () => {
-    mainPage.visit();
     mainPage.getTitle().should('include', 'bücher.de');
   });
 
   it('should display the logo', () => {
-    mainPage.visit();
     mainPage.getLogo().should('be.visible');
   });
 
   it('should display the search input', () => {
-    mainPage.visit();
     mainPage.getSearchInput().should('be.visible');
   });
 
   it('should display the registration link', () => {
-    mainPage.visit();
     mainPage.getRegistrationLink().should('be.visible');
-});
+  });
 
-it('should display the Wishlist icon', () => {
-  mainPage.visit();
-  mainPage.getWishlistIcon().should('be.visible');
-});
+  it('should display the Wishlist icon', () => {
+    mainPage.getWishlistIcon().should('be.visible');
+  });
 
-it('should display the Payback icon', () => {
-  mainPage.visit();
-  mainPage.getPaybackIcon().should('be.visible');
-});
+  it('should display the Payback icon', () => {
+    mainPage.getPaybackIcon().should('be.visible');
+  });
 
-it('should display the Shopping basket', () => {
-  mainPage.visit();
-  mainPage.getShoppingBasket().should('be.visible');
-});
+  it('should display the Shopping basket', () => {
+    mainPage.getShoppingBasket().should('be.visible');
+  });
+
+  it('should display Buch section', () => {
+    mainPage.getBuchSection().should('be.visible');
+  });
+
+  it('should display eBook section', () => {
+    mainPage.getEBookSection().should('be.visible');
+  });
+
+  it('should display tolino section', () => {
+    mainPage.getTolinoSection().should('be.visible');
+  });
+
+  it('should display Hörbuch section', () => {
+    mainPage.getHörbuchSection().should('be.visible');
+  });
+
+  it('should display Kinderbuch section', () => {
+    mainPage.getKinderbuchSection().should('be.visible');
+  });
+  
+  it('should display Jugendbuch section', () => {
+    mainPage.getJugendbuchSection().should('be.visible');
+  });
+  
+  it('should display Ratgeber section', () => {
+    mainPage.getRatgeberSection().should('be.visible');
+  });
+  
+  it('should display Schule section', () => {
+    mainPage.getSchuleSection().should('be.visible');
+  });
+  
+  it('should display Kalender section', () => {
+    mainPage.getKalenderSection().should('be.visible');
+  });
+  
+  it('should display Englische Bücher section', () => {
+    mainPage.getEnglischeBuecherSection().should('be.visible');
+  });
+  
+  it('should display SALE section', () => {
+    mainPage.getSaleSection().should('be.visible');
+  });
+  
+  it('should display Spielzeug section', () => {
+    mainPage.getSpielzeugSection().should('be.visible');
+  });
+  
+  it('should display Musik section', () => {
+    mainPage.getMusikSection().should('be.visible');
+  });
+  
+  it('should display Film section', () => {
+    mainPage.getFilmSection().should('be.visible');
+  });
+  
+  it('should display Games section', () => {
+    mainPage.getGamesSection().should('be.visible');
+  });
+  
+  it('should display Fanartikel section', () => {
+    mainPage.getFanartikelSection().should('be.visible');
+  });
+  
+  it('should display Technik section', () => {
+    mainPage.getTechnikSection().should('be.visible');
+  });
+  
+  it('should display Wohnen & Leben section', () => {
+    mainPage.getWohnenSection().should('be.visible');
+  });
+  
+  it('should display Schreibwaren section', () => {
+    mainPage.getSchreibwarenSection().should('be.visible');
+  });
+  
+  it('should display Buchreihen section', () => {
+    mainPage.getBuchreihenSection().should('be.visible');
+  });
+  
+  it('should display Magazin section', () => {
+    mainPage.getMagazinSection().should('be.visible');
+  });
+
+  it('should display Service-Portal button', () => {
+    mainPage.getServicePortalButton().should('be.visible');
+  });
 
   it('should display the Newsletter-signup input', () => {
-    mainPage.visit();
     mainPage.getNewsletterInput().should('be.visible');
   });
 });
