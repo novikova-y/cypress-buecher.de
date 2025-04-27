@@ -218,5 +218,73 @@ describe('Buecher.de main page', () => {
   it('should display the Newsletter-signup input', () => {
     mainPage.getNewsletterInput().should('be.visible');
   });
-  
+
+  it('should display "Mein Konto" link in the footer', () => {
+    mainPage.getFooterAccountLink().should('be.visible');
+});
+
+it('should display "Gutschein einlösen" link in the footer', () => {
+    mainPage.getFooterGutscheinLink().should('be.visible');
+});
+
+it('should display "Lieferung & Versand" link in the footer', () => {
+    mainPage.getFooterLieferungLink().should('be.visible');
+});
+
+it('should display "Rücksendung" link in the footer', () => {
+    mainPage.getFooterRuecksendungLink().should('be.visible');
+});
+
+it('should display "Widerruf" link in the footer', () => {
+    mainPage.getFooterWiderrufLink().should('be.visible');
+});
+
+it('should display "Rechnung" link in the footer', () => {
+    mainPage.getFooterRechnungLink().should('be.visible');
+});
+
+it('should display "PayPal" link in the footer', () => {
+    mainPage.getFooterPaypalLink().should('be.visible');
+});
+
+it('should display "Kreditkarte" link in the footer', () => {
+    mainPage.getFooterKreditkarteLink().should('be.visible');
+});
+
+it('should display "Kontakt" link in the footer', () => {
+    mainPage.getFooterKontaktLink().should('be.visible');
+});
+
+it('should display "Geschenkgutscheine" link in the footer', () => {
+    mainPage.getFooterGeschenkgutscheineLink().should('be.visible');
+});
+
+it('should display "Datenschutz" link in the footer', () => {
+    mainPage.getFooterDatenschutzLink().should('be.visible');
+});
+
+it('should display "FAQ" link in the footer', () => {
+    mainPage.getFooterFaqLink().should('be.visible');
+});
+
+it('should display "AGB" link in the footer', () => {
+    mainPage.getFooterAgbLink().should('be.visible');
+});
+
+it('should display "Über uns" link in the footer', () => {
+    mainPage.getFooterUeberUnsLink().should('be.visible');
+});
+
+it('should display "Impressum" link in the footer', () => {
+    mainPage.getFooterImpressumLink().should('be.visible');
+});
+
+it('should display "Partnerprogramm" link in the footer', () => {
+    mainPage.getFooterPartnerprogrammLink().should('be.visible');
+});
+
+it('should display "Pressemitteilungen" link in the footer', () => {
+    mainPage.getFooterPressemitteilungenLink().should('be.visible');
+});
+
 });

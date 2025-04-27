@@ -183,6 +183,74 @@ export class MainPage {
         return cy.get('#form_email_benefit');
     }
 
+    getFooterAccountLink() {
+        return cy.get('a.link.d-block').contains('Mein Konto');
+    }
+    
+    getFooterGutscheinLink() {
+        return cy.get('a.link.d-block').contains('Gutschein einlösen');
+    }
+    
+    getFooterLieferungLink() {
+        return cy.get('a.link.d-block').contains('Lieferung & Versand');
+    }
+    
+    getFooterRuecksendungLink() {
+        return cy.get('a.link.d-block').contains('Rücksendung');
+    }
+    
+    getFooterWiderrufLink() {
+        return cy.get('a.link.d-block').contains('Widerruf');
+    }
+    
+    getFooterRechnungLink() {
+        return cy.get('a.link.d-block').contains('Rechnung');
+    }
+    
+    getFooterPaypalLink() {
+        return cy.get('a.link.d-block').contains('PayPal');
+    }
+    
+    getFooterKreditkarteLink() {
+        return cy.get('a.link.d-block').contains('Kreditkarte');
+    }
+    
+    getFooterKontaktLink() {
+        return cy.get('a.link.d-block').contains('Kontakt');
+    }
+    
+    getFooterGeschenkgutscheineLink() {
+        return cy.get('a.link.d-block').contains('Geschenkgutscheine');
+    }
+    
+    getFooterDatenschutzLink() {
+        return cy.get('a.link.d-block').contains('Datenschutz');
+    }
+    
+    getFooterFaqLink() {
+        return cy.get('a.link.d-block').contains('FAQ');
+    }
+    
+    getFooterAgbLink() {
+        return cy.get('a.link.d-block').contains('AGB');
+    }
+    
+    getFooterUeberUnsLink() {
+        return cy.get('a.link.d-block').contains('Über uns');
+    }
+    
+    getFooterImpressumLink() {
+        return cy.get('a.link.d-block').contains('Impressum');
+    }
+    
+    getFooterPartnerprogrammLink() {
+        return cy.get('a.link.d-block').contains('Partnerprogramm');
+    }
+    
+    getFooterPressemitteilungenLink() {
+        return cy.get('a.link.d-block').contains('Pressemitteilungen');
+    }
+
   }
   
   export const mainPage = new MainPage();
