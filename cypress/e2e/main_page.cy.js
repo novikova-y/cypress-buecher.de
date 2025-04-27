@@ -287,4 +287,36 @@ it('should display "Pressemitteilungen" link in the footer', () => {
     mainPage.getFooterPressemitteilungenLink().should('be.visible');
 });
 
+it('should display Facebook icon', () => {
+  mainPage.getFacebookIcon().should('be.visible');
+});
+
+it('should display Instagram icon', () => {
+  mainPage.getInstagramIcon().should('be.visible');
+});
+
+it('should display YouTube icon', () => {
+  mainPage.getYouTubeIcon().should('be.visible');
+});
+
+it('should display Rechnung icon', () => {
+  mainPage.getRechnungIcon().should('be.visible');
+});
+
+it('should display PayPal icon', () => {
+  mainPage.getPayPalIcon().should('be.visible');
+});
+
+it('should display Kreditkarte icon', () => {
+  mainPage.getKreditkarteIcon().should('be.visible');
+});
+
+it('should display Payback service icon', () => {
+  mainPage.getPaybackServiceIcon().should('be.visible');
+});
+
+it('should display Deutsche Post DHL icon', () => {
+  mainPage.getDeutschePostDHLIcon().should('be.visible');
+});
+
 });

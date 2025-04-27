@@ -5,7 +5,7 @@ export class MainPage {
     }
   
     getTitle() {
-      return cy.title();
+        return cy.title();
     }
     getLogo() {
         return cy.get('svg.icon.bde-logo.pull-left');
@@ -214,7 +214,7 @@ export class MainPage {
     getFooterKreditkarteLink() {
         return cy.get('a.link.d-block').contains('Kreditkarte');
     }
-    
+
     getFooterKontaktLink() {
         return cy.get('a.link.d-block').contains('Kontakt');
     }
@@ -249,6 +249,34 @@ export class MainPage {
     
     getFooterPressemitteilungenLink() {
         return cy.get('a.link.d-block').contains('Pressemitteilungen');
+    }
+    getFacebookIcon() {
+        return cy.get('a[aria-label="facebook"]');
+    }
+    
+    getInstagramIcon() {
+        return cy.get('img[alt="instagram"]');
+    }
+    getYouTubeIcon() {
+        return cy.get('a[aria-label="youtube"]');
+    }
+    getRechnungIcon() {
+        return cy.get('a[aria-label="Rechnung"]');
+    }
+
+    getPayPalIcon() {
+        return cy.get('a[aria-label="PayPal"]');
+    }
+    
+    getKreditkarteIcon() {
+        return cy.get('a[aria-label="Kreditkarte"]');
+    }
+    getPaybackServiceIcon() {
+        return cy.get('a[aria-label="Payback"]');
+    }
+    
+    getDeutschePostDHLIcon() {
+    return cy.get('img[alt="Deutsche Post DHL"]');
     }
 
   }
