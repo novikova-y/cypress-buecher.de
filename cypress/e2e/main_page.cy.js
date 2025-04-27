@@ -191,7 +191,32 @@ describe('Buecher.de main page', () => {
     mainPage.getSidebarGUShopSection().should('be.visible');
   });
 
+  it('should display Bestseller - Bücher block', () => {
+    mainPage.getBestsellerBooksBlock().should('be.visible');
+  });
+
+  it('should display Bestseller - Filme block', () => {
+    mainPage.getBestsellerMoviesBlock().should('be.visible');
+  });
+
+  it('should display Bestseller - Musik block', () => {
+    mainPage.getBestsellerMusicBlock().should('be.visible');
+  });
+
+  it('should display Bestseller - Spielwaren block', () => {
+    mainPage.getBestsellerToysBlock().should('be.visible');
+  });
+
+  it('should display Bestseller - Games block', () => {
+    mainPage.getBestsellerGamesBlock().should('be.visible');
+  });
+
+  it('should display Bestseller - Schreibwaren block', () => {
+    mainPage.getBestsellerStationeryBlock().should('be.visible');
+  });
+
   it('should display the Newsletter-signup input', () => {
     mainPage.getNewsletterInput().should('be.visible');
   });
+  
 });

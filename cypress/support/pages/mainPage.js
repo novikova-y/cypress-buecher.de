@@ -156,6 +156,29 @@ export class MainPage {
     getSidebarGUShopSection() {
         return cy.contains('a', 'GU-Shop');
     }
+    getBestsellerBooksBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Bücher');
+    }
+
+    getBestsellerMoviesBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Filme');
+    }
+    
+    getBestsellerMusicBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Musik');
+    }
+    
+    getBestsellerToysBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Spielwaren');
+    }
+    
+    getBestsellerGamesBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Games');
+    }
+    
+    getBestsellerStationeryBlock() {
+        return cy.get('a.headline-link').contains('Bestseller - Schreibwaren');
+    }
     getNewsletterInput() {
         return cy.get('#form_email_benefit');
     }
