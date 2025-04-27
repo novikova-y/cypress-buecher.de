@@ -123,6 +123,74 @@ describe('Buecher.de main page', () => {
     mainPage.getServicePortalButton().should('be.visible');
   });
 
+  it('should display Newsletter button', () => {
+    mainPage.getNewsletterButton().should('be.visible');
+  });
+
+  it('should display Banner', () => {
+    mainPage.getBanner().should('be.visible');
+  });
+
+  it('should display Bestseller Section', () => {
+    mainPage.getSidebarBestsellerSection().should('be.visible');
+  });
+
+  it('should display Neuheiten Section', () => {
+    mainPage.getSidebarNeuheitenSection().should('be.visible');
+  });
+  
+  it('should display Vorschau Section', () => {
+    mainPage.getSidebarVorschauSection().should('be.visible');
+  });
+  
+  it('should display Preishits Section', () => {
+    mainPage.getSidebarPreishitsSection().should('be.visible');
+  });
+  
+  it('should display Geschenkgutscheine Section', () => {
+    mainPage.getSidebarGeschenkgutscheineSection().should('be.visible');
+  });
+
+  it('should display Sidebar Buchreihen Section', () => {
+    mainPage.getSidebarBuchreihenSection().should('be.visible');
+  });
+
+  it('should display Sidebar Kochbuchshop Section', () => {
+    mainPage.getSidebarKochbuchshopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar Greg-Shop Section', () => {
+    mainPage.getSidebarGregShopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar Reiseführer Section', () => {
+    mainPage.getSidebarReisefuehrerSection().should('be.visible');
+  });
+  
+  it('should display Sidebar Star Wars-Shop Section', () => {
+    mainPage.getSidebarStarWarsShopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar Nintendo-Shop Section', () => {
+    mainPage.getSidebarNintendoShopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar STABILO-Shop Section', () => {
+    mainPage.getSidebarStabiloShopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar Bravo Hits Section', () => {
+    mainPage.getSidebarBravoHitsSection().should('be.visible');
+  });
+  
+  it('should display Sidebar LEGO® Shop Section', () => {
+    mainPage.getSidebarLegoshopSection().should('be.visible');
+  });
+  
+  it('should display Sidebar GU-Shop Section', () => {
+    mainPage.getSidebarGUShopSection().should('be.visible');
+  });
+
   it('should display the Newsletter-signup input', () => {
     mainPage.getNewsletterInput().should('be.visible');
   });

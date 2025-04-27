@@ -91,6 +91,71 @@ export class MainPage {
     getServicePortalButton() {
         return cy.get('#chatbot-start-icon');
     }
+    getNewsletterButton() {
+        return cy.get('a[title="Jetzt kostenlosen Newsletter abonnieren"]');
+    }
+    getBanner() {
+        return cy.get('.banner-129468 .btn-primary');
+    }
+    getSidebarBestsellerSection() {
+        return cy.contains('a.without-icon', 'Bestseller');
+    }
+    
+    getSidebarNeuheitenSection() {
+        return cy.contains('a.without-icon', 'Neuheiten');
+    }
+    
+    getSidebarVorschauSection() {
+        return cy.contains('a.without-icon', 'Vorschau');
+    }
+    
+    getSidebarPreishitsSection() {
+        return cy.contains('a.without-icon', 'Preishits');
+    }
+    
+    getSidebarGeschenkgutscheineSection() {
+        return cy.contains('a.without-icon', 'Geschenkgutscheine');
+    }
+
+    getSidebarBuchreihenSection() {
+        return cy.contains('a', 'Buchreihen');
+    }
+
+    getSidebarKochbuchshopSection() {
+        return cy.contains('a', 'Kochbuchshop');
+    }
+      
+    getSidebarGregShopSection() {
+        return cy.contains('a', 'Greg-Shop');
+    }
+      
+    getSidebarReisefuehrerSection() {
+        return cy.contains('a', 'Reiseführer');
+    }
+      
+    getSidebarStarWarsShopSection() {
+        return cy.contains('a', 'Star Wars-Shop');
+    }
+      
+    getSidebarNintendoShopSection() {
+        return cy.contains('a', 'Nintendo-Shop');
+    }
+      
+    getSidebarStabiloShopSection() {
+        return cy.contains('a', 'STABILO-Shop');
+    }
+      
+    getSidebarBravoHitsSection() {
+        return cy.contains('a', 'Bravo Hits');
+    }
+      
+    getSidebarLegoshopSection() {
+        return cy.contains('a', 'LEGO® Shop');
+    }
+      
+    getSidebarGUShopSection() {
+        return cy.contains('a', 'GU-Shop');
+    }
     getNewsletterInput() {
         return cy.get('#form_email_benefit');
     }
