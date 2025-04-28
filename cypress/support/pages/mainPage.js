@@ -94,8 +94,8 @@ export class MainPage {
     getNewsletterButton() {
         return cy.get('a[title="Jetzt kostenlosen Newsletter abonnieren"]');
     }
-    getBanner() {
-        return cy.get('.banner-129468 .btn-primary');
+    getBannerSlider() {
+        return cy.get('ul.plain.slides.top-banners');
     }
     getSidebarBestsellerSection() {
         return cy.contains('a.without-icon', 'Bestseller');
