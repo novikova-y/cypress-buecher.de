@@ -30,5 +30,55 @@ describe('Buecher.de section transitions', () => {
     mainPage.getSidebarGeschenkgutscheineSection().click();
     mainPage.getTitle().should('include', 'Geschenkgutscheine');
   });
+
+  it('should navigate to the Buchreihen section when clicked', () => {
+    mainPage.getSidebarBuchreihenSection().click();
+    mainPage.getTitle().should('include', 'Buchreihen');
+  });
+
+  it('should navigate to the Kochbuchshop section when clicked', () => {
+    mainPage.getSidebarKochbuchshopSection().click();
+    mainPage.getTitle().should('include', 'Kochbücher');
+  });
+
+  it('should navigate to the Greg-Shop section when clicked', () => {
+    mainPage.getSidebarGregShopSection().click();
+    mainPage.getTitle().should('include', 'Gregs Tagebuch');
+  });
+
+  it('should navigate to the Reiseführer section when clicked', () => {
+    mainPage.getSidebarReisefuehrerSection().click();
+    mainPage.getTitle().should('include', 'Reiseführer');
+  });
+
+  it('should navigate to the Star Wars-Shop section when clicked', () => {
+    mainPage.getSidebarStarWarsShopSection().click();
+    mainPage.getTitle().should('include', 'Star Wars Shop');
+  });
+
+  it('should navigate to the Nintendo-Shop section when clicked', () => {
+    mainPage.getSidebarNintendoShopSection().click();
+    mainPage.getTitle().should('include', 'Nintendo Shop');
+  });
+
+  it('should navigate to the STABILO-Shop section when clicked', () => {
+    mainPage.getSidebarStabiloShopSection().click();
+    mainPage.getTitle().should('include', 'STABILO Markenshop');
+  });
+
+  it('should navigate to the Bravo Hits section when clicked', () => {
+    mainPage.getSidebarBravoHitsSection().click();
+    mainPage.getTitle().should('include', 'Bravo Hits');
+  });
+
+  it('should navigate to the LEGO® Shop section when clicked', () => {
+    mainPage.getSidebarLegoshopSection().click();
+    mainPage.getTitle().should('include', 'LEGO®');
+  });
+
+  it('should navigate to the GU-Shop section when clicked', () => {
+    mainPage.getSidebarGUShopSection().click();
+    mainPage.getTitle().should('include', 'GU Verlag');
+  });
  
 });
