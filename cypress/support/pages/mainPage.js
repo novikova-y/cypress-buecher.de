@@ -23,8 +23,8 @@ export class MainPage {
         return cy.get('img.logo-payback');
     }
     getShoppingBasket() {
-        return cy.get('a[data-gat="header;Warenkorb"]');
-    }
+        return cy.get('a[data-gat="header;Warenkorb"]:visible').first();
+      }
     getBuchSection() {
         return cy.get('a[data-gat="primaryNavi;Buch"]');
     }
