@@ -14,7 +14,7 @@ describe('Add book to cart API test', () => {
   });
 
   it('should add a book to the cart and confirm the POST request', function () {
-    const book = this.books.Lolita;
+    const book = this.books.derZauberberg;
 
     // Intercept the POST request for adding the book to the cart, using productId from fixture
     cy.intercept('POST', `/go/ajax_ajaxssl/cart_add_item/prod_id/${book.productId}/`).as('addToCart');

@@ -3,8 +3,12 @@
     "title": "All the King's Men",
     "productId": "22922676"
   },
-  "Lolita": {
+  "lolita": {
     "title": "Lolita",
     "productId": "07620782"
+  },
+  "derZauberberg": {
+    "title": "Der Zauberberg",
+    "productId": "03874467"
   }
 }
