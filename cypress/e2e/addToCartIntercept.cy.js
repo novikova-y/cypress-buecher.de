@@ -13,23 +13,34 @@ describe('Add book to cart API test', () => {
     mainPage.visit();
   });
 
-  it('should add a book to the cart and confirm the POST request', function () {
+  it('should add a book to the cart and validate the API response', function () {
     const book = this.books.derZauberberg;
 
-    // Intercept the POST request for adding the book to the cart, using productId from fixture
-    cy.intercept('POST', `/go/ajax_ajaxssl/cart_add_item/prod_id/${book.productId}/`).as('addToCart');
+    // Intercept the POST request for adding the book to the cart
+    cy.intercept('POST', `**/cart_add_item/prod_id/${book.productId}/`).as('addToCart');
 
-    // Search for the book and navigate to its page
+    // Search for the book and go to its detail page
     mainPage.getSearchInput().type(`${book.title}{enter}`);
-    cy.get(`a[data-pid="${book.productId}"]`).click();
+    cy.get(`a[data-behavior="productTitle"][href*="${book.productId}"]`)
+      .should('contain', book.title)
+      .click();
 
-    // Click the "Add to Cart" button
-    cy.contains('button[title="In den Warenkorb"]', 'In den Warenkorb').first().click();
+    // Click "Add to Cart" button
+    cy.contains('button[data-behavior="buyBtn"]', 'In den Warenkorb').first().click();
 
-    // Wait for the add to cart API response and verify it was successful
-    cy.wait('@addToCart').its('response.statusCode').should('eq', 200);
+    // Wait for and validate the API response
+    cy.wait('@addToCart').then(({ response }) => {
+      expect(response.statusCode).to.eq(200);
+      const responseBody = JSON.parse(response.body);
 
-    // Verify the confirmation message is displayed
-    cy.get('h1').should('contain', 'Der Artikel wurde dem Warenkorb hinzugefügt!');
+      expect(responseBody).to.have.property('success', true);
+      expect(responseBody).to.have.property('cartQuantity', 1);
+      expect(responseBody).to.have.property('products').and.to.include(book.productId);
+    });
+
+    // Assert that the button text changed and became disabled
+    cy.get(`form[data-pid="${book.productId}"] button[data-behavior="buyBtn"]`)
+      .should('contain', 'Im Warenkorb')
+      .and('be.disabled');
   });
 });
