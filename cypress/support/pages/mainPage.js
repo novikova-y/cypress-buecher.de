@@ -8,7 +8,7 @@ export class MainPage {
         return cy.title();
     }
     getLogo() {
-        return cy.get('svg.icon.bde-logo.pull-left');
+        return cy.get('img[alt="bücher.de"]').should('be.visible');
     }
     getSearchInput() {
         return cy.get('#qusearchfield');
