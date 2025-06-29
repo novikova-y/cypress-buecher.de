@@ -20,7 +20,7 @@ describe('Add book to cart flow', () => {
     mainPage.getSearchInput().type(`${book.title}{enter}`);
 
     // Click on the book link by product ID and verify it contains the book title
-    cy.get(`a[data-pid="${book.productId}"]`)
+    cy.get(`a[data-behavior="productTitle"][href*="${book.productId}"]`)
       .should('contain', book.title)
       .click();
 
@@ -30,20 +30,12 @@ describe('Add book to cart flow', () => {
       .and('contain', book.title);
 
     // Click on the "Add to cart" button
-    cy.contains('button[title="In den Warenkorb"]', 'In den Warenkorb')
-      .first()
-      .click();
+    cy.contains('button[data-behavior="buyBtn"]', 'In den Warenkorb').first().click();
 
-    // Verify the success message confirming the item was added to the cart
-    cy.get('h1')
-      .should('contain', 'Der Artikel wurde dem Warenkorb hinzugefügt!');
-
-    // Close the confirmation modal
-    cy.get('button.close[data-behavior="close"]')
-      .click();
-
-    // Confirm the modal has been closed
-    cy.get('button.close[data-behavior="close"]').should('not.exist');
+    // Assert that the button text changed and became disabled
+    cy.get(`form[data-pid="${book.productId}"] button[data-behavior="buyBtn"]`)
+      .should('contain', 'Im Warenkorb')
+      .and('be.disabled');
 
     // Navigate back to the homepage
     mainPage.visit();
@@ -52,7 +44,6 @@ describe('Add book to cart flow', () => {
     mainPage.getShoppingBasket().click();
 
     // Verify the book is present in the shopping cart by checking the title
-    cy.get('.title')
-      .should('contain', book.title);
+    cy.get(`a[href*="${book.productId}"]`).should('contain', book.title);
   });
 });
