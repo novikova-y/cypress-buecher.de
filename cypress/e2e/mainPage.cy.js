@@ -46,27 +46,25 @@ describe('Buecher.de main page', () => {
 
   });
 
-  // describe('Footer elements', () => {
-  //   it('should display Footer links', () => {
-  //     mainPage.getFooterAccountLink().should('be.visible');
-  //     mainPage.getFooterGutscheinLink().should('be.visible');
-  //     mainPage.getFooterLieferungLink().should('be.visible');
-  //     mainPage.getFooterRuecksendungLink().should('be.visible');
-  //     mainPage.getFooterWiderrufLink().should('be.visible');
-  //     mainPage.getFooterRechnungLink().should('be.visible');
-  //     mainPage.getFooterPaypalLink().should('be.visible');
-  //     mainPage.getFooterKreditkarteLink().should('be.visible');
-  //     mainPage.getFooterKontaktLink().should('be.visible');
-  //     mainPage.getFooterGeschenkgutscheineLink().should('be.visible');
-  //     mainPage.getFooterDatenschutzLink().should('be.visible');
-  //     mainPage.getFooterFaqLink().should('be.visible');
-  //     mainPage.getFooterAgbLink().should('be.visible');
-  //     mainPage.getFooterUeberUnsLink().should('be.visible');
-  //     mainPage.getFooterImpressumLink().should('be.visible');
-  //     mainPage.getFooterPartnerprogrammLink().should('be.visible');
-  //     mainPage.getFooterPressemitteilungenLink().should('be.visible');
-  //   });
-  // });
+  describe('Footer elements', () => {
+    it('should display Footer links', () => {
+      mainPage.getFooterOrdersLink().should('be.visible');
+      mainPage.getFooterRuecksendungLink().should('be.visible');
+      mainPage.getFooterWiderrufLink().should('be.visible');
+      mainPage.getFooterRechnungLink().should('be.visible');
+      mainPage.getFooterPaypalLink().should('be.visible');
+      mainPage.getFooterKreditkarteLink().should('be.visible');
+      mainPage.getFooterOtherPaymentMethodsLink().should('be.visible');
+      mainPage.getFooterKontaktLink().should('be.visible');
+      mainPage.getFooterLieferungLink().should('be.visible');
+      mainPage.getFooterDatenschutzLink().should('be.visible');
+      mainPage.getFooterFaqLink().should('be.visible');
+      mainPage.getFooterAgbLink().should('be.visible');
+      mainPage.getFooterImpressumLink().should('be.visible');
+      mainPage.getFooterPartnerprogrammLink().should('be.visible');
+      mainPage.getFooterPressemitteilungenLink().should('be.visible');
+    });
+  });
 
   describe('Social media and service icons', () => {
     it('should display social media and service icons', () => {

@@ -20,86 +20,77 @@ export class MainPage {
         return cy.get('a[data-tooltip="Meine Merkliste"]');
     }
     getPaybackIcon() {
-    return cy.get('img[alt^="PAYBACK Logo"]');
+        return cy.get('img[alt^="PAYBACK Logo"]');
     }
     getShoppingBasket() {
-    return cy.get('a[data-behavior="cartCount"]').contains('Warenkorb');
+        return cy.get('a[data-behavior="cartCount"]').contains('Warenkorb');
     }
    
     getNewsletterButton() {
-    return cy.get('button[title="Zum Newsletter eintragen"]');
+        return cy.get('button[title="Zum Newsletter eintragen"]');
     }
 
     getNewsletterInput() {
         return cy.get('input[placeholder="Deine E-Mail-Adresse"]');
     }
 
-    getFooterAccountLink() {
-        return cy.get('a.link.d-block').contains('Mein Konto');
+    getFooterOrdersLink() {
+        return cy.contains('a[href*="/my_orders"]', 'Meine Bestellungen');
     }
     
     getFooterGutscheinLink() {
-        return cy.get('a.link.d-block').contains('Gutschein einlösen');
-    }
-    
-    getFooterLieferungLink() {
-        return cy.get('a.link.d-block').contains('Lieferung & Versand');
+        return cy.contains('a[href*="/answers/id/05/"]', 'Gutschein einlösen');
     }
     
     getFooterRuecksendungLink() {
-        return cy.get('a.link.d-block').contains('Rücksendung');
-    }
-    
-    getFooterWiderrufLink() {
-        return cy.get('a.link.d-block').contains('Widerruf');
-    }
-    
-    getFooterRechnungLink() {
-        return cy.get('a.link.d-block').contains('Rechnung');
-    }
-    
-    getFooterPaypalLink() {
-        return cy.get('a.link.d-block').contains('PayPal');
-    }
-    
-    getFooterKreditkarteLink() {
-        return cy.get('a.link.d-block').contains('Kreditkarte');
+        return cy.contains('a', 'Rücksendung');
     }
 
+    getFooterWiderrufLink() {
+        return cy.contains('a','Widerruf');
+    }
+
+    getFooterRechnungLink() {
+        return cy.contains('a','Rechnung');
+    }
+
+    getFooterPaypalLink() {
+        return cy.contains('a','PayPal');
+    }
+
+    getFooterKreditkarteLink() {
+        return cy.contains('a','Kreditkarte');
+    }
+
+    getFooterOtherPaymentMethodsLink() {
+        return cy.contains('a','Weitere Zahlungsarten');
+    }
     getFooterKontaktLink() {
-        return cy.get('a.link.d-block').contains('Kontakt');
+        return cy.contains('a','Kontakt');
     }
-    
-    getFooterGeschenkgutscheineLink() {
-        return cy.get('a.link.d-block').contains('Geschenkgutscheine');
+    getFooterLieferungLink() {
+        return cy.contains('a','Lieferung & Versand');
     }
-    
     getFooterDatenschutzLink() {
-        return cy.get('a.link.d-block').contains('Datenschutz');
+        return cy.contains('a','Datenschutz');
     }
     
     getFooterFaqLink() {
-        return cy.get('a.link.d-block').contains('FAQ');
+        return cy.contains('a','FAQ');
     }
-    
-    getFooterAgbLink() {
-        return cy.get('a.link.d-block').contains('AGB');
-    }
-    
-    getFooterUeberUnsLink() {
-        return cy.get('a.link.d-block').contains('Über uns');
-    }
-    
     getFooterImpressumLink() {
-        return cy.get('a.link.d-block').contains('Impressum');
+        return cy.contains('a','Impressum');
+    }
+    getFooterAgbLink() {
+        return cy.contains('a','AGB');
     }
     
     getFooterPartnerprogrammLink() {
-        return cy.get('a.link.d-block').contains('Partnerprogramm');
+        return cy.contains('a','Partnerprogramm');
     }
     
     getFooterPressemitteilungenLink() {
-        return cy.get('a.link.d-block').contains('Pressemitteilungen');
+        return cy.contains('a','Pressemitteilungen');
     }
 
     getInstagramIcon() {
