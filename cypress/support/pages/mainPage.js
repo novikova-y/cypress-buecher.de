@@ -101,33 +101,32 @@ export class MainPage {
     getFooterPressemitteilungenLink() {
         return cy.get('a.link.d-block').contains('Pressemitteilungen');
     }
-    getFacebookIcon() {
-        return cy.get('a[aria-label="facebook"]');
-    }
-    
+
     getInstagramIcon() {
-        return cy.get('img[alt="instagram"]');
-    }
-    getYouTubeIcon() {
-        return cy.get('a[aria-label="youtube"]');
-    }
-    getRechnungIcon() {
-        return cy.get('a[aria-label="Rechnung"]');
+        return cy.get('a[data-tooltip="Folge uns auf Instagram"]');
     }
 
-    getPayPalIcon() {
-        return cy.get('a[aria-label="PayPal"]');
+    getFacebookIcon() {
+        return cy.get('a[data-tooltip="Folge uns auf Facebook"]');
     }
     
+    getYouTubeIcon() {
+        return cy.get('a[data-tooltip="Folge uns auf YouTube"]');
+    }
+    getTikTokIcon() {
+        return cy.get('a[data-tooltip="Folge uns auf TikTok"]');
+    }
+    getRechnungIcon() {
+        return cy.get('a[data-tooltip="Bezahlung auf Rechnung"]');
+    }
+    getPayPalIcon() {
+        return cy.get('a[data-tooltip="Bezahlung mit PayPal"]');
+    }
     getKreditkarteIcon() {
-        return cy.get('a[aria-label="Kreditkarte"]');
+        return cy.get('a[data-tooltip="Bezahlung mit Kreditkarte"]');
     }
     getPaybackServiceIcon() {
-        return cy.get('a[aria-label="Payback"]');
-    }
-    
-    getDeutschePostDHLIcon() {
-    return cy.get('img[alt="Deutsche Post DHL"]');
+        return cy.get('img[alt="Payback-Logo mit lachendem Pointee"]');
     }
 
   }

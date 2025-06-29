@@ -68,16 +68,16 @@ describe('Buecher.de main page', () => {
   //   });
   // });
 
-  // describe('Social media and service icons', () => {
-  //   it('should display social media and service icons', () => {
-  //     mainPage.getFacebookIcon().should('be.visible');
-  //     mainPage.getInstagramIcon().should('be.visible');
-  //     mainPage.getYouTubeIcon().should('be.visible');
-  //     mainPage.getRechnungIcon().should('be.visible');
-  //     mainPage.getPayPalIcon().should('be.visible');
-  //     mainPage.getKreditkarteIcon().should('be.visible');
-  //     mainPage.getPaybackServiceIcon().should('be.visible');
-  //     mainPage.getDeutschePostDHLIcon().should('be.visible');
-  //   });
-  // });
+  describe('Social media and service icons', () => {
+    it('should display social media and service icons', () => {
+      mainPage.getFacebookIcon().should('be.visible');
+      mainPage.getInstagramIcon().should('be.visible');
+      mainPage.getYouTubeIcon().should('be.visible');
+      mainPage.getTikTokIcon().should('be.visible');
+      mainPage.getRechnungIcon().should('be.visible');
+      mainPage.getPayPalIcon().should('be.visible');
+      mainPage.getKreditkarteIcon().should('be.visible');
+      mainPage.getPaybackServiceIcon().should('be.visible');
+    });
+  });
 });
