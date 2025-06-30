@@ -12,10 +12,7 @@ This project is focused on **automated testing** of the **Buecher.de** website u
 ## Why This Project?
 This project is part of my personal challenge to improve **web automation testing** skills by applying them to a real e-commerce website.
 
-### European Accessibility Act update Case Study
+### Website Redesign Case Study
+In late June 2025, the website underwent a major redesign that affected its UI and structure. As a result, several existing Cypress tests began to fail due to outdated selectors and DOM changes.
 
-In late June 2025, a new EU Accessibility Act came into effect, causing significant changes to the website's UI and structure. This led to many of the existing Cypress tests failing.
-
-I performed a thorough audit of the failing tests, updated selectors and assertions according to the new accessibility standards, and restored full test coverage.
-
-This experience strengthened my debugging skills and taught me how to maintain resilient tests in a changing environment.
+I audited the affected tests, updated relevant selectors and assertions, and restored full test coverage. This process helped me deepen my understanding of test resilience and sharpened my debugging skills when dealing with dynamic interfaces.
