@@ -103,8 +103,8 @@ export class MainPage {
     return cy.contains('a', 'Partnerprogramm');
   }
 
-  getFooterPressemitteilungenLink() {
-    return cy.contains('a', 'Pressemitteilungen');
+  getFooterBarrierefreiheitLink() {
+    return cy.contains('a', 'Barrierefreiheit');
   }
 
   // Social media and payment icons

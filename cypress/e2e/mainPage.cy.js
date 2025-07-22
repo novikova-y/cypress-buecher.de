@@ -45,7 +45,7 @@ describe('Buecher.de main page', () => {
       mainPage.getFooterAgbLink,
       mainPage.getFooterImpressumLink,
       mainPage.getFooterPartnerprogrammLink,
-      mainPage.getFooterPressemitteilungenLink,
+      mainPage.getFooterBarrierefreiheitLink,
     ];
 
     it('should display all footer links', () => {
