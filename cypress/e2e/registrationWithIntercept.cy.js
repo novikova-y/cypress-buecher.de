@@ -1,4 +1,5 @@
 import { mainPage } from "../support/pages/mainPage";
+import { registrationPage } from "../support/pages/registrationPage";
 import { generateUserData } from "../support/helpers/generateUser";
 
 describe('User registration with intercept', () => {
@@ -20,22 +21,11 @@ describe('User registration with intercept', () => {
     // Step 3: Generate test data
     const user = generateUserData();
 
-    // Step 4: Fill registration form
-    cy.get('input[name="form[title]"]').type(user.title);
-    cy.get('input[name="form[first_name]"]').type(user.firstName);
-    cy.get('input[name="form[last_name]"]').type(user.lastName);
-    cy.get('input[name="form[street]"]').type(user.street);
-    cy.get('input[name="form[street_number]"]').type(user.streetNumber);
-    cy.get('input[name="form[zip]"]').type(user.zip);
-    cy.get('input[name="form[city]"]').invoke('val', user.city).trigger('input');
-    cy.get('input[name="form[birthdate]"]').type(user.birthdate);
-    cy.get('input[name="form[email]"]').type(user.email);
-    cy.get('input[name="form[password]"]').type(user.password);
+    // Step 4: Fill form via page object
+    registrationPage.fillForm(user);
+    registrationPage.submit();
 
-    // Step 5: Submit form
-    cy.get('input[type="submit"][value="Weiter"]').click();
-
-    // Step 6: Validate intercepted request
+    // Step 5: Validate intercepted request
     cy.wait('@registration').then(({ request, response }) => {
       expect(response.statusCode).to.eq(302);
 
@@ -48,7 +38,7 @@ describe('User registration with intercept', () => {
       expect(params.get('form[password]')).to.eq(user.password);
     });
 
-    // Step 7: Verify user is now logged in
+    // Step 6: Check welcome message
     cy.get('h5.h5--section')
       .should('be.visible')
       .and('contain.text', 'Herzlich willkommen');

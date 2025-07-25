@@ -28,7 +28,7 @@ import 'cypress-iframe';
 // Set cookies for consent acceptance
 Cypress.Commands.add('setConsentCookies', () => {
     cy.setCookie('klaro', JSON.stringify({
-      "buecher_session": true,
+     "buecher_session": true,
       "google_services_session": true,
       "klaro": true,
       "buecher_statistics": true,
@@ -50,6 +50,8 @@ Cypress.Commands.add('setConsentCookies', () => {
       "gumgum": true,
       "outbrain": true,
       "rtb_house": true,
+      "salenti": true,
+      "sovendus": true,
       "tradedoubler": true,
       "xandr": true,
       "necessary": true,
