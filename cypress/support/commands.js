@@ -54,6 +54,7 @@ Cypress.Commands.add('setConsentCookies', () => {
       "sovendus": true,
       "tradedoubler": true,
       "xandr": true,
+      "clarity": true,
       "necessary": true,
       "functional": true,
       "personalization": true,
